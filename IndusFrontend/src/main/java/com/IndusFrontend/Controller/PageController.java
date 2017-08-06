@@ -5,12 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.Indusbackend.dao.CategoryDAO;
+import com.IndusBackend.daoimpl.CategoryDAOImpl;
+import com.IndusBackend.dao.CategoryDAO;
 
 @Controller
 public class PageController {
 	@Autowired
-	private CategoryDAO categoryDAO; 
+	private CategoryDAOImpl categoryDAO; 
 @RequestMapping(value={"/","/home","/index"})
 public ModelAndView index(){
 	ModelAndView mv=new ModelAndView("page");
