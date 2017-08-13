@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.annotation.Order;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -20,11 +19,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DBConfig {
 
 	// Change the below based on the DBMS you choose
-	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/shoppingportal";
+	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/e";
 	private final static String DATABASE_DRIVER = "org.h2.Driver";
 	private final static String DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
 	private final static String DATABASE_USERNAME = "sys";
-	private final static String DATABASE_PASSWORD = "";
+	private final static String DATABASE_PASSWORD = "sys";
 	
 	// dataSource bean will be available
 	@Bean("dataSource")
@@ -67,9 +66,8 @@ public class DBConfig {
 		
 		properties.put("hibernate.dialect", DATABASE_DIALECT);		
 		properties.put("hibernate.show_sql", "true");
-		properties.put("hibernate.format_sql", "true");
-		
-		//properties.put("hibernate.hbm2ddl.auto", "create");
+		properties.put("hibernate.format_sql", "true");		
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		
 		return properties;
