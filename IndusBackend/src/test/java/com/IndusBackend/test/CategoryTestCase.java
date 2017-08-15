@@ -30,32 +30,32 @@ public class CategoryTestCase {
 	}
 	
 	
-	@Test
+	/*@Test
 	public void testAddCategory() {
 		
 		category = new Category();
 		
-		category.setName("Laptop");
+		category.setName("TGS");
 		category.setDescription("This is some description for laptop!");
 		category.setImageURL("CAT_105.png");
 		
 		assertEquals("Successfully added a category inside the table!",true,categoryDAO.add(category));
 		
 		
-	}
+	}*/
 	
 	
 /*	@Test
 	public void testGetCategory() {
 		
-		category = categoryDAO.get(3);
+		category = categoryDAO.get(2);
 		
 		
-		assertEquals("Successfully fetched a single category from the table!","Television",category.getName());
+		assertEquals("Successfully fetched a single category from the table!","TGS",category.getName());
 		
 		
-	}
-	*/
+	}*/
+	
 	
 /*	@Test
 	public void testUpdateCategory() {
@@ -79,16 +79,16 @@ public class CategoryTestCase {
 		
 	}
 */	
-/*	
+
 	@Test
 	public void testListCategory() {
 					
-		assertEquals("Successfully fetched the list of categories from the table!",3,categoryDAO.list().size());
+		assertEquals("Successfully fetched the list of categories from the table!",1,categoryDAO.list().size());
 		
 		
 	}
 	
-*/
+
 	/*
 	@Test
 	public void testCRUDCategory() {
